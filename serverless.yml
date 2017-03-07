@@ -1,0 +1,67 @@
+service: eqsimulator
+
+frameworkVersion: ">=1.8.0 <2.0.0"
+
+custom:
+  service: ${self:service}-${self:provider.stage}
+  defaultStage: dev
+  defaultRegion: eu-west-1
+  defaultAccount: '511386292871'
+  defaultProfile: fulldev
+  isprivate: false
+provider:
+  name: aws
+  runtime: nodejs4.3
+  stage: ${opt:stage, self:custom.defaultStage}
+  region: ${opt:region, self:custom.defaultRegion}
+  account: ${opt:account, self:custom.defaultAccount}
+  profile: ${opt:profile, self:custom.defaultProfile}
+  memorySize: 128
+  role: arn:aws:iam::511386292871:role/eqsimulator-dev-eu-west-1-lambdaRole
+
+  timeout: 60
+
+  environment:
+    SERVICE: ${self:custom.service}
+    STAGE: ${self:provider.stage}
+    REGION: ${self:provider.region}
+    DEBUG: 1
+  iamRoleStatements:
+   - Effect: Allow
+     Action:
+     - lambda:InvokeAsync
+     - lambda:InvokeFunction
+     Resource: "*"  
+   - Effect: "Allow"
+     Action:
+     - s3:* 
+     Resource: arn:aws:s3:::${self:custom.service}*
+   - Effect: "Allow"
+     Action:
+     - iot:* 
+     Resource: arn:aws:iot:::*     
+
+
+functions:
+  simulator:
+    description: Simulate an IOT device capturing an earthquake
+    handler: src/simulator/index.handler
+  analizer:
+    description: Analyze data from an MQTT topic 
+    handler: src/analyzer/index.handler
+    events:
+      - iot:
+          name: "EqAnalyzer"
+          sql: "SELECT * FROM 'simulator/topic'"
+          description: "Get data from the earthquake simulator"
+  mqttdispatcher:
+    description: Publish the payload to a MQTT topic
+    handler: src/dispatcher/index.handler
+    timeout: 30
+    memorySize: 256
+    events:
+      - http:
+          path: publish
+          method: post
+          private: false
+          cors: ${file(./cors.yml)}           
