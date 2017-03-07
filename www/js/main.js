@@ -42,18 +42,18 @@
                     }
 
                     if (obj.long != "0.00") {
-                        postShadow(obj);
+                        postTopic(obj, "shadow");
                     }
 
                 });
             });
 
-            function postShadow(shadow) {
-                var method = "publish/";
+            function postTopic(payload, topic) {
+                var method = "publish/" + topic;
                 var enpoint = Config.APIEndpoint + method;
                 $.ajax({
                     url: enpoint,
-                    data: JSON.stringify(shadow),
+                    data: JSON.stringify(payload),
                     dataType: 'json',
                     type: "POST"
                 }).done(function(data) {

@@ -61,7 +61,15 @@ functions:
     memorySize: 256
     events:
       - http:
-          path: publish
+          path: publish/{topic}
           method: post
           private: false
-          cors: true         
+          cors: true
+  preprocess:
+    handler: src/process/index.handler
+    events:
+      - stream:
+          arn: arn:aws:kinesis:eu-west-1:511386292871:stream/eqsimulator
+          batchSize: 100
+          startingPosition: LATEST
+          enabled: false                   
