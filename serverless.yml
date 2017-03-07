@@ -43,7 +43,8 @@ provider:
    - Effect: "Allow"
      Action:
      - kinesis:* 
-     Resource: arn:aws:kinesis:::*             
+     Resource: arn:aws:kinesis:*:*:stream/*   
+           
 
 
 functions:
@@ -73,7 +74,4 @@ functions:
     handler: src/process/index.handler
     events:
       - stream:
-          arn: arn:aws:kinesis:eu-west-1:511386292871:stream/eqsimulator
-          batchSize: 100
-          startingPosition: LATEST
-          enabled: true                   
+          arn: arn:aws:kinesis:eu-west-1:511386292871:stream/eqsimulator              
