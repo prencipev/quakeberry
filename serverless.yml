@@ -39,7 +39,11 @@ provider:
    - Effect: "Allow"
      Action:
      - iot:* 
-     Resource: arn:aws:iot:::*     
+     Resource: arn:aws:iot:::*
+   - Effect: "Allow"
+     Action:
+     - kinesis:* 
+     Resource: arn:aws:kinesis:::*             
 
 
 functions:
@@ -72,4 +76,4 @@ functions:
           arn: arn:aws:kinesis:eu-west-1:511386292871:stream/eqsimulator
           batchSize: 100
           startingPosition: LATEST
-          enabled: false                   
+          enabled: true                   

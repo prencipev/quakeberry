@@ -3,8 +3,8 @@
 npm-debug.log
 
 # serverless zip
-.serverless
-
+**/.serverless/
+**/.zip
 
 # build
 build/
