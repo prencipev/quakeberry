@@ -64,4 +64,4 @@ functions:
           path: publish
           method: post
           private: false
-          cors: ${file(./cors.yml)}           
+          cors: true         

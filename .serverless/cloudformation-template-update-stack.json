@@ -30,7 +30,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/eqsimulator/dev/1488903804026-2017-03-07T16:23:24.026Z/eqsimulator.zip"
+          "S3Key": "serverless/eqsimulator/dev/1488906317799-2017-03-07T17:05:17.799Z/eqsimulator.zip"
         },
         "FunctionName": "eqsimulator-dev-simulator",
         "Handler": "src/simulator/index.handler",
@@ -49,14 +49,14 @@
         }
       }
     },
-    "SimulatorLambdaVersionnssuSzySx0eQz3LuOpBF32ddubDwc7EjnZtb4hZK4": {
+    "SimulatorLambdaVersionKuyBhnrQSmIaZDPmbWU7J752J33ZyK1mEwIEYCNaw8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "SimulatorLambdaFunction"
         },
-        "CodeSha256": "/nssuSzySx0eQz3LuOp/BF32ddubDwc7EjnZtb4hZK4="
+        "CodeSha256": "KuyBhnrQ+SmIaZDPmbWU7J752J33ZyK1mEwIEYCNaw8="
       }
     },
     "AnalizerLambdaFunction": {
@@ -66,7 +66,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/eqsimulator/dev/1488903804026-2017-03-07T16:23:24.026Z/eqsimulator.zip"
+          "S3Key": "serverless/eqsimulator/dev/1488906317799-2017-03-07T17:05:17.799Z/eqsimulator.zip"
         },
         "FunctionName": "eqsimulator-dev-analizer",
         "Handler": "src/analyzer/index.handler",
@@ -85,14 +85,14 @@
         }
       }
     },
-    "AnalizerLambdaVersionnssuSzySx0eQz3LuOpBF32ddubDwc7EjnZtb4hZK4": {
+    "AnalizerLambdaVersionKuyBhnrQSmIaZDPmbWU7J752J33ZyK1mEwIEYCNaw8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AnalizerLambdaFunction"
         },
-        "CodeSha256": "/nssuSzySx0eQz3LuOp/BF32ddubDwc7EjnZtb4hZK4="
+        "CodeSha256": "KuyBhnrQ+SmIaZDPmbWU7J752J33ZyK1mEwIEYCNaw8="
       }
     },
     "MqttdispatcherLambdaFunction": {
@@ -102,7 +102,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/eqsimulator/dev/1488903804026-2017-03-07T16:23:24.026Z/eqsimulator.zip"
+          "S3Key": "serverless/eqsimulator/dev/1488906317799-2017-03-07T17:05:17.799Z/eqsimulator.zip"
         },
         "FunctionName": "eqsimulator-dev-mqttdispatcher",
         "Handler": "src/dispatcher/index.handler",
@@ -121,14 +121,14 @@
         }
       }
     },
-    "MqttdispatcherLambdaVersionnssuSzySx0eQz3LuOpBF32ddubDwc7EjnZtb4hZK4": {
+    "MqttdispatcherLambdaVersionKuyBhnrQSmIaZDPmbWU7J752J33ZyK1mEwIEYCNaw8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "MqttdispatcherLambdaFunction"
         },
-        "CodeSha256": "/nssuSzySx0eQz3LuOp/BF32ddubDwc7EjnZtb4hZK4="
+        "CodeSha256": "KuyBhnrQ+SmIaZDPmbWU7J752J33ZyK1mEwIEYCNaw8="
       }
     },
     "ApiGatewayRestApi": {
@@ -236,7 +236,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1488903804129": {
+    "ApiGatewayDeployment1488906317954": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -346,19 +346,19 @@
     "SimulatorLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "SimulatorLambdaVersionnssuSzySx0eQz3LuOpBF32ddubDwc7EjnZtb4hZK4"
+        "Ref": "SimulatorLambdaVersionKuyBhnrQSmIaZDPmbWU7J752J33ZyK1mEwIEYCNaw8"
       }
     },
     "AnalizerLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AnalizerLambdaVersionnssuSzySx0eQz3LuOpBF32ddubDwc7EjnZtb4hZK4"
+        "Ref": "AnalizerLambdaVersionKuyBhnrQSmIaZDPmbWU7J752J33ZyK1mEwIEYCNaw8"
       }
     },
     "MqttdispatcherLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "MqttdispatcherLambdaVersionnssuSzySx0eQz3LuOpBF32ddubDwc7EjnZtb4hZK4"
+        "Ref": "MqttdispatcherLambdaVersionKuyBhnrQSmIaZDPmbWU7J752J33ZyK1mEwIEYCNaw8"
       }
     },
     "ServiceEndpoint": {

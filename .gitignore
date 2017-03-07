@@ -1,2 +1,10 @@
+.DS_Store
 **/node_modules/**
-./serverless
+npm-debug.log
+
+# serverless zip
+.serverless
+
+
+# build
+build/
