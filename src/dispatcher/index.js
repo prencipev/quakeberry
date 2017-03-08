@@ -13,6 +13,7 @@ function runShadowThingRegister(event, callback) {
     var myRes = response();
     var params = event.pathParameters;
     var topic = params.topic;
+
     const iotdata = new AWS.IotData({ endpoint: "ak8by74ifg9ks.iot.eu-west-1.amazonaws.com", region: 'eu-west-1' });
 
     var params = {

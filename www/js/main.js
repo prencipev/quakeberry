@@ -33,6 +33,14 @@
                     if (!$(this).attr('id')) {
                         $(this).uniqueId();
                     }
+                    $("#map").addMarker({
+                        coords: [42.60307025, 2.290569],
+                        icon: 'img/rb24.png',
+                        draggable: true,
+                        success: function(e) {
+                            console.log(e);
+                        }
+                    });
                     var obj = {
                         device_id: $(this).attr('id'),
                         long: ($(this).position().top).toFixed(2),

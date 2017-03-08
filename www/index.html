@@ -11,14 +11,31 @@
 
 <body>
     <div class="berry-add"></div>
-    <main></main>
+    <div id="map" style="width: 100%; height:900px;"></div>
 
-    <div class="error"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" crossorigin="anonymous"></script>
-    <script src="js/jquery.ripples.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJkPb9Gn49BFrK9XxuHch-V3Dj4Hc9K2s"></script>
+    <script src="js/jquery.googlemap.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#map").googleMap({
+                zoom: 6, // Initial zoom level (optional)
+                coords: [45.4654219, 9.18592430000001], // Map center (optional)
+                type: "ROADMAP" // Map type (optional)
+            });
+            $("#map").addMarker({
+                coords: [42.60307025, 2.290569],
+                icon: 'img/rb24.png',
+                draggable: true,
+                success: function(e) {
+                    console.log(e);
+                }
+            });
+        })
+    </script>
 </body>
 
 </html>
