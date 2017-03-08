@@ -18,4 +18,4 @@ context.done = function() {
     console.log("Lambda Function Complete");
 };
 
-app.dispatcher(event, context, callback);
+app.process(event, context, callback);

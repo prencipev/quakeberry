@@ -45,8 +45,6 @@ provider:
      - kinesis:* 
      Resource: arn:aws:kinesis:*:*:stream/*   
            
-
-
 functions:
   simulator:
     description: Simulate an IOT device capturing an earthquake

@@ -4,7 +4,7 @@ const ruleName = 'simulator_rule';
 
 var event;
 var context;
-createIndex();
+//createIndex();
 
 exports.handler = (event, context, callback) => {
     runSimulator(event, callback);
