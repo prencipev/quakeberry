@@ -24,15 +24,7 @@
             $("#map").googleMap({
                 zoom: 6, // Initial zoom level (optional)
                 coords: [45.4654219, 9.18592430000001], // Map center (optional)
-                type: "ROADMAP" // Map type (optional)
-            });
-            $("#map").addMarker({
-                coords: [42.60307025, 2.290569],
-                icon: 'img/rb24.png',
-                draggable: true,
-                success: function(e) {
-                    console.log(e);
-                }
+                type: "TERRAIN" // Map type (optional)
             });
         })
     </script>

@@ -5,6 +5,8 @@
  
  html {
      background-color: #a3ccff;
+     margin: 0;
+     padding: 0;
  }
  
  body {
@@ -123,4 +125,9 @@
  ui-draggable {
      z-index: 10;
      position: absolute!important;
+ }
+ 
+ #map {
+     position: absolute;
+     top: 0px;
  }
