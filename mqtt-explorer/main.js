@@ -161,7 +161,7 @@ window.isUndefined = function(value) {
 //
 window.mqttClientMessageHandler = function(topic, payload) {
     console.log('message: ' + '<span>' + topic + '</span>:' + payload.toString());
-    messageHistory = messageHistory + '<span>' + topic + '</span>:' + ':' + payload.toString() + '</br></br>';
+    messageHistory = messageHistory + '<span>' + topic + '</span>' + ' :' + payload.toString() + '</br></br>';
     document.getElementById('subscribe-div').innerHTML = '<p>' + messageHistory + '</p>';
 };
 
