@@ -1,0 +1,376 @@
+.selectDivision .form-group {
+    margin-bottom: 0px;
+}
+
+.selectDivision select {
+    margin-top: 14px;
+}
+
+.singleURL .panel-content.bg-white,
+.campaign .panel-content.bg-white {
+    text-align: left;
+    color: #1A8DEF;
+    font-size: 16px;
+    min-height: 65px;
+}
+
+.singleURL .panel-content.bg-white span.results,
+.campaign .panel-content.bg-white span.resultcontainer {
+    display: none;
+}
+
+.singleURL .panel-content.bg-white a,
+.campaign .panel-content.bg-white a:not('.btn') {
+    color: #1A8DEF;
+    font-weight: bold;
+    margin-left: 20px
+}
+
+.copySingleURL,
+.downloadCampaignFile {
+    float: right;
+}
+
+.parsley-errors-list li {
+    color: #F44336!important;
+}
+
+.pagination>.active>a {
+    color: #fff!important;
+    border-color: #3e4855;
+    background-color: #3e4855;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+tr {
+    font-size: 14px;
+}
+
+.edit,
+.remove {
+    text-align: center;
+    font-size: 17px;
+}
+
+.edit i:hover,
+.remove i:hover {
+    cursor: pointer;
+}
+
+.campaign-panel .division {
+    display: inline-block;
+    margin: 15px 0 0 0;
+}
+
+.campaign-panel .requestDownloadCampaignFile,
+.links-panel .requestDownloadCampaignFile {
+    clear: both;
+    text-align: center;
+    float: none;
+    margin: 15px 0;
+}
+
+.campaign-panel .bg-white a.btn {
+    font-weight: bold;
+    margin-left: 20px;
+    margin-left: 0px;
+}
+
+.remove .popover-content,
+.edit .popover-content {
+    text-align: center;
+}
+
+.remove .popover-content .btn,
+.edit .popover-content .btn {
+    margin-right: 15px;
+}
+
+.edit .popover-content input {
+    margin-bottom: 15px;
+}
+
+td.edit,
+td.remove {
+    text-align: center!important;
+}
+
+a.campaignFile,
+a.smartLinkSingle {
+    color: #1A8DEF!important;
+    margin-left: 15px;
+    font-weight: bold;
+    display: inline-block;
+    width: 60%;
+    word-wrap: break-word;
+    line-height: 1em;
+}
+
+td.longurl {
+    width: 45%;
+    word-break: break-all
+}
+
+td.shorturl {
+    color: #50cc11!important;
+    text-align: center!important;
+    word-break: break-all
+}
+
+td.placeholder {
+    text-align: center!important;
+}
+
+td.android {
+    text-align: center!important;
+    color: #479595!important;
+    word-break: break-all;
+    width: 30%
+}
+
+td.ios {
+    text-align: center!important;
+    color: #7C55E8!important;
+    word-break: break-all;
+    width: 30%
+}
+
+td.tag {
+    color: #E91E63!important;
+    text-align: center!important;
+}
+
+.edit .label-default,
+.popover-content .label-default {
+    float: left;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.popover-content .form-group {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.text-info strong {
+    color: #e73629!important;
+}
+
+th {
+    text-transform: uppercase;
+}
+
+.buttons-container {
+    text-align: center!important;
+}
+
+.downloadLinksFile {
+    margin-top: 15px;
+}
+
+.box-campaign .content {
+    font-size: 20px;
+    line-height: 1.4em;
+    min-height: 50px;
+}
+
+.box-campaign .title {
+    font-size: 16px;
+}
+
+.box-campaign .title a.remove {
+    font-size: 16px!important;
+    color: #fff
+}
+
+.box-campaign .title a.remove:hover {
+    color: #ddd
+}
+
+;
+.box-campaign .tile-content-wrapper:hover .tile-content,
+.box-campaign .tile-content-wrapper:hover i {
+    color: #ddd;
+}
+
+.box-campaign.boxwhite .tile-content-wrapper:hover {
+    cursor: default;
+}
+
+.box-campaign .tile-content.content {
+    text-align: center!important;
+    width: 82%;
+    float: right;
+    min-height: 55px;
+}
+
+.tile-box.bg-white {
+    border-color: #ddd;
+}
+
+.tile-box.bg-white .tile-content-wrapper {
+    background-color: rgba(238, 238, 238, 0.46);
+}
+
+.tile-header .float-right {
+    opacity: 1;
+    -moz-opacity: .1;
+    filter: alpha(opacity: 100);
+}
+
+.popover .popover-content {
+    text-align: center;
+}
+
+.popover .popover-content a {
+    margin-right: 15px;
+}
+
+.box-campaign .tile-content-wrapper:hover {
+    cursor: pointer!important;
+}
+
+#page-footer {
+    background: #fff;
+    box-shadow: 1px 0px 1px rgba(0, 0, 0, .09);
+}
+
+#page-footer {
+    position: fixed;
+    width: 100%;
+    padding-left: 300px;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    z-index: 100;
+    text-align: left;
+}
+
+#page-footer {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.progress {
+    display: block;
+    text-align: center;
+    width: 0;
+    height: 3px;
+    background: #f62b70;
+    transition: width .3s;
+}
+
+.progress.hide {
+    opacity: 0;
+    transition: opacity 1.3s;
+}
+
+.parsley-errors-list li {
+    font-size: 13px!important;
+    padding-top: 5px;
+    font-weight: 400!important;
+}
+
+.fileinput-exists[data-dismiss=fileinput] {
+    display: none;
+}
+
+.fileinput-filename {
+    overflow: hidden;
+    margin: 0px;
+    padding: 0pc;
+    word-wrap: break-word;
+    height: 20px;
+    width: 100%;
+}
+
+i.fileinput-exists {
+    display: none;
+}
+
+.fileinput.input-group {
+    display: inline;
+}
+
+#campaign .panel-box,
+#links .panel-box {
+    vertical-align: top;
+}
+
+.col-md-3.box-campaign {
+    margin-bottom: 20px;
+}
+
+#page-footer .svg-icon-loader {
+    margin: -20px auto 0 auto;
+    width: 100px;
+    height: 100px;
+    float: none;
+    line-height: 100px;
+    text-align: center;
+}
+
+#campaigns {
+    padding-bottom: 35px;
+    clear: both;
+    padding-top: 80px;
+}
+
+#campaigns-header,
+#searchresult-header {
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+#campaigns-header,
+#searchresult-header {
+    position: fixed;
+    width: 100%;
+    padding-left: 300px;
+    left: 0;
+    top: 61px;
+    min-height: 60px;
+    z-index: 5;
+}
+
+#campaigns-header form,
+#searchresult-header form {
+    margin-top: 15px;
+}
+
+#campaigns-header,
+#searchresult-header {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+#campaigns-header .parsley-errors-list.filled {
+    clear: both;
+}
+
+#searchresult {
+    padding-top: 90px;
+}
+
+.dataTables_info {
+    text-align: left;
+}
+
+tr .campaignname {
+    text-align: center!important;
+    text-transform: uppercase!important;
+}
+
+.shorturl a {
+    color: orange;
+}
+
+.shorturl a:hover {
+    color: darkorange;
+}

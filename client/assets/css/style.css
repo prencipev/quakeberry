@@ -1,0 +1,35 @@
+.berry-add {
+    background-image: url('../img/rb.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px!important;
+    height: 24px!important;
+    z-index: 20;
+    float: left;
+    margin-top: 30px;
+    margin-right: 20px!important;
+}
+
+.mover-add {
+    background-image: url('../img/mover.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px!important;
+    height: 24px!important;
+    z-index: 20;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+ui-draggable {
+    z-index: 10;
+    position: absolute!important;
+}
+
+#map {
+    position: absolute;
+    top: 0px;
+}

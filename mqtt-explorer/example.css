@@ -59,6 +59,31 @@ p {
     word-wrap: initial;
 }
 
-span {
-    color: #000;
+span.title {
+    display: block;
+    color: red;
+    background: #000;
+    padding: 4px;
+    text-align: center;
+    margin: 0 0 6px 0;
+}
+
+.string {
+    color: green;
+}
+
+.number {
+    color: darkorange;
+}
+
+.boolean {
+    color: blue;
+}
+
+.null {
+    color: magenta;
+}
+
+.key {
+    color: red;
 }

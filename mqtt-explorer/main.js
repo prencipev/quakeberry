@@ -136,7 +136,7 @@ window.mqttClientConnectHandler = function() {
     mqttClient.subscribe("shadow/topic");
     mqttClient.subscribe("simulator/topic");
     mqttClient.subscribe("analyzer/topic");
-
+    mqttClient.subscribe("result/topic");
 };
 
 //
@@ -160,8 +160,7 @@ window.isUndefined = function(value) {
 // connect/disconnect.
 //
 window.mqttClientMessageHandler = function(topic, payload) {
-    console.log('message: ' + '<span>' + topic + '</span>:' + payload.toString());
-    messageHistory = messageHistory + '<span>' + topic + '</span>' + ' :' + payload.toString() + '</br></br>';
+    messageHistory = messageHistory + '<span class="title">' + topic + '</span>' + ' :' + syntaxHighlight(payload.toString()) + '</br></br>';
     document.getElementById('subscribe-div').innerHTML = '<p>' + messageHistory + '</p>';
 };
 
@@ -216,3 +215,22 @@ mqttClient.on('message', window.mqttClientMessageHandler);
 document.getElementById('connecting-div').style.visibility = 'visible';
 document.getElementById('explorer-div').style.visibility = 'hidden';
 document.getElementById('connecting-div').innerHTML = '<p>attempting to connect to aws iot...</p>';
+
+function syntaxHighlight(json) {
+    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function(match) {
+        var cls = 'number';
+        if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+                cls = 'key';
+            } else {
+                cls = 'string';
+            }
+        } else if (/true|false/.test(match)) {
+            cls = 'boolean';
+        } else if (/null/.test(match)) {
+            cls = 'null';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+    });
+}

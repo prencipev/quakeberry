@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #loading .svg-icon-loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -50px 0 0 -50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <!--[if IE]>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+      <![endif]-->
+    <title>SmartLink - URL shortner</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/icons/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/icons/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/icons/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/icons/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/assets/images/icons/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/assets/helpers/animate.css">
+    <link rel="stylesheet" type="text/css" href="/assets/helpers/boilerplate.css">
+    <link rel="stylesheet" type="text/css" href="/assets/helpers/border-radius.css">
+    <link rel="stylesheet" type="text/css" href="/assets/helpers/grid.css">
+    <link rel="stylesheet" type="text/css" href="/assets/helpers/page-transitions.css">
+    <link rel="stylesheet" type="text/css" href="/assets/helpers/spacing.css">
+    <link rel="stylesheet" type="text/css" href="/assets/helpers/typography.css">
+    <link rel="stylesheet" type="text/css" href="/assets/helpers/utils.css">
+    <link rel="stylesheet" type="text/css" href="/assets/helpers/colors.css">
+    <link rel="stylesheet" type="text/css" href="/assets/elements/buttons.css">
+    <link rel="stylesheet" type="text/css" href="/assets/elements/content-box.css">
+    <link rel="stylesheet" type="text/css" href="/assets/elements/dashboard-box.css">
+    <link rel="stylesheet" type="text/css" href="/assets/elements/forms.css">
+    <link rel="stylesheet" type="text/css" href="/assets/elements/images.css" <link rel="stylesheet" type="text/css" href="/assets/elements/menus.css">
+    <link rel="stylesheet" type="text/css" href="/assets/elements/panel-box.css">
+    <link rel="stylesheet" type="text/css" href="/assets/elements/response-messages.css">
+    <link rel="stylesheet" type="text/css" href="/assets/elements/responsive-tables.css">
+    <link rel="stylesheet" type="text/css" href="/assets/elements/tables.css">
+    <link rel="stylesheet" type="text/css" href="/assets/elements/tile-box.css">
+    <link rel="stylesheet" type="text/css" href="/assets/icons/fontawesome/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="/assets/icons/linecons/linecons.css">
+    <link rel="stylesheet" type="text/css" href="/assets/icons/spinnericon/spinnericon.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/chosen/chosen.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/datatable/datatable.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/dialog/dialog.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/dropdown/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/dropzone/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/file-input/fileinput.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/input-switch/inputswitch.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/input-switch/inputswitch-alt.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/modal/modal.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/multi-select/multiselect.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/multi-upload/fileupload.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/popover/popover.css">
+    <link rel="stylesheet" type="text/css" href="/assets/widgets/tooltip/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="/assets/snippets/login-box.css">
+    <link rel="stylesheet" type="text/css" href="/assets/snippets/user-profile.css">
+    <link rel="stylesheet" type="text/css" href="/assets/snippets/mobile-navigation.css">
+    <link rel="stylesheet" type="text/css" href="/assets/themes/admin/layout.css">
+    <link rel="stylesheet" type="text/css" href="/assets/themes/admin/color-schemes/default.css">
+    <link rel="stylesheet" type="text/css" href="/assets/themes/components/default.css">
+    <link rel="stylesheet" type="text/css" href="/assets/themes/components/border-radius.css">
+    <link rel="stylesheet" type="text/css" href="/assets/helpers/responsive-elements.css">
+    <link rel="stylesheet" type="text/css" href="/assets/helpers/admin-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <script type="text/javascript" src="/assets/js-core/jquery-core.js"></script>
+    <script type="text/javascript" src="/assets/js-core/jquery-ui-core.js"></script>
+    <script type="text/javascript" src="/assets/js-core/jquery-ui-widget.js"></script>
+    <script type="text/javascript" src="/assets/js-core/jquery-ui-mouse.js"></script>
+    <script type="text/javascript" src="/assets/js-core/jquery-ui-position.js"></script>
+    <script type="text/javascript" src="/assets/js-core/transition.js"></script>
+    <script type="text/javascript" src="/assets/js-core/modernizr.js"></script>
+    <script type="text/javascript" src="/assets/js-core/jquery-cookie.js"></script>
+    <script type="text/javascript" src="/assets/js-core/jasny-bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js-core/jquery.router.js"></script>
+    <script src="https://use.fontawesome.com/695249c06d.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            setTimeout(function() {
+                $('#loading').fadeOut(400, "linear");
+            }, 300);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="sb-site">
+        <div id="loading">
+            <div class="svg-icon-loader"><img src="https://agileui.com/demo/delight/assets/images/svg-loaders/bars.svg" width="40" alt="">
+            </div>
+        </div>
+        <div id="page-wrapper">
+            <div id="mobile-navigation">
+                <button id="nav-toggle" class="collapsed" data-toggle="collapse" data-target="#page-sidebar"><span></span>
+               </button>
+            </div>
+            <div id="page-sidebar">
+                <div id="header-logo" class="logo-bg"><a href="/" class="logo-content-big" title="SmartLink">SmartLink<span>URL Shortner</span></a>
+                    <a href="/" class="logo-content-small" title="SmartLink">SmartLink <span>URL Shortner</span></a>
+                    <a id="close-sidebar" href="#" title="Close sidebar"><i class="glyph-icon icon-outdent"></i></a>
+                </div>
+                <div class="scroll-sidebar">
+                    <iframe width="100%" height="100%" frameborder="0" style="margin:20px 0 0 0; padding:0px;" src="http://localhost:8002"></iframe>
+                </div>
+            </div>
+            <div id="page-content-wrapper">
+                <div id="page-header">
+                    <div id="header-nav-left">
+                        <a class="header-btn" id="logout-btn" href="lockscreen-3.html" title="Lockscreen page example"><i class="glyph-icon icon-linecons-lock"></i></a>
+                        <div class="user-account-btn dropdown">
+                            <a href="#" title="My Account" class="user-profile clearfix" data-toggle="dropdown"><i class="glyph-icon icon-user font-azure mrg15R font-size-18 "></i> <span></span>                                    <i class="glyph-icon icon-angle-down"></i>
+                           </a>
+                            <div class="dropdown-menu float-right">
+                                <div class="box-sm">
+                                    <div class="login-box clearfix">
+                                        <div class="user-img">
+                                            <a href="#" title="" class="change-img"></a> <img src="../../assets/image-resources/logo-ynap.png" alt="" data-pin-nopin="true">
+                                        </div>
+                                        <div class="user-info">
+                                            <span style="font-weight:bold;">
+                                       <a></a>
+                                       <i style="font-weight:normal;"></i>
+                                       </span>
+                                            <div class="row" style="clear:both; padding-top:10px; text-align:left;margin-left: 0px;">
+                                                <div class="groupview" style="display:inline; margin-right:15px; width:auto;"><span style="display:inline-block; font-size:13px; margin-right:10px; ">Team:</span>
+                                                    <a href="#" title="team" class="group" style="font-weight:bold;"></a>
+                                                </div>
+                                                <div class="userview" style="display:inline; width:auto;"><span style="display:inline-block; font-size:13px; margin-right:10px; clear:both;">User:</span>
+                                                    <a href="#" title="team" class="user" style="font-weight:bold;"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="button-pane button-pane-alt pad5L pad5R text-center"><a href="#" class="logout btn btn-flat display-block font-normal btn-danger"><i class="glyph-icon icon-power-off"></i> Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="header-nav-right">
+                        <a href="#" class="hdr-btn" id="fullscreen-btn" title="Fullscreen"><i class="glyph-icon icon-arrows-alt"></i></a>
+                        <a href="javascript:void(0);" class="hdr-btn mover-add" style="margin: 18px 10px;"></a>
+                        <a href="javascript:void(0);" class="hdr-btn berry-add" style="margin: 18px 10px;"></a>
+                    </div>
+                </div>
+                <div id="map" style="width: 100%; height:100%;"></div>
+                <div id="page-content">
+
+
+
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/assets/widgets/dropdown/dropdown.js"></script>
+        <script type="text/javascript" src="/assets/widgets/tooltip/tooltip.js"></script>
+        <script type="text/javascript" src="/assets/widgets/popover/popover.js"></script>
+        <script type="text/javascript" src="/assets/widgets/superclick/superclick.js"></script>
+        <script type="text/javascript" src="/assets/widgets/input-switch/inputswitch-alt.js"></script>
+        <script type="text/javascript" src="/assets/widgets/input-switch/inputswitch.js"></script>
+        <script type="text/javascript" src="/assets/widgets/slimscroll/slimscroll.js"></script>
+        <script type="text/javascript" src="/assets/widgets/screenfull/screenfull.js"></script>
+        <script type="text/javascript" src="/assets/widgets/material/material.js"></script>
+        <script type="text/javascript" src="/assets/js-init/widgets-init.js"></script>
+        <script type="text/javascript" src="/assets/themes/admin/layout.js"></script>
+        <script type="text/javascript" src="/assets/widgets/parsley/parsley.js"></script>
+        <script type="text/javascript" src="/assets/widgets/datatable/datatable.js"></script>
+        <script type="text/javascript" src="/assets/widgets/datatable/datatable-bootstrap.js"></script>
+        <script type="text/javascript" src="/assets/widgets/datatable/datatable-responsive.js"></script>
+        <script type="text/javascript" src="/assets/js-core/jszip.js"></script>
+        <script type="text/javascript" src="/assets/js-core/xlsx.js"></script>
+    </div>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJkPb9Gn49BFrK9XxuHch-V3Dj4Hc9K2s"></script>
+    <script src="/assets/js/jquery.googlemap.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+        })
+    </script>
+</body>
+
+</html>
